@@ -11,7 +11,7 @@ $(document).ready(function() {
     const travel = $("input:radio[name=visit]:checked").val();
     const num = parseInt($("input#num").val());
 
-    if (num <= 4) {
+    if (num <= 4 && num >= 0) {
       if (bev === "1" && travel === "no") {
         $("#ruby").show();
         $("#python").hide();
