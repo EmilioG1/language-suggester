@@ -11,15 +11,78 @@
     <h1>Language Suggestion Machine</h1>
     <p>Which programmming language is right for you?</p>
     <form id="language">
+
       <div class="form-group">
-        <label for="one"></label>
-        <select class="form-control" id=""></select>
+        <div>
+          <p>Where do you prefer to sit in an airplane?</p>
+          <div class="form-control">
+            <input type="radio" name="plane" id="front" checked>
+            <label for="front">Front</label>
+          </div>
+          <div class="form-control">
+            <input type="radio" name="plane" id="back">
+            <label for="back">Back</label>
+          </div>
+          <div class="form-control">
+            <input type="radio" name="plane" id="middle">
+            <label for="middle">Middle</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="drink">Do you prefer coffee or tea?</label>
+        <select class="form-control" id="drink">
+          <option value="1">Coffee</option>
+          <option value="2">Tea</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <p>Have you traveled outside of the United States</p>
+        <div class="form-control">
+          <input type="radio" name="yes" id="front" checked>
+          <label for="yes">Yes</label>
+        </div>
+        <div class="form-control">
+          <input type="radio" name="no" id="back">
+          <label for="no">No</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="num">What is your favorite number between 1 and 10?</label>
+        <div class="form-control">
+          <input type="number" id="num" name="num" placeholder="Enter a number">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="forms">Do you enjoy filling out forms?</label>
+        <select class="form-control" id="forms">
+          <option value="1">Strongly Agree</option>
+          <option value="2">Undecided</option>
+          <option value="3">Strongly Disagree</option>
+        </select>
+      </div>
+
+      <div class="output">
+        <button type="submit" id="button" class="btn btn-info">Submit</button>
       </div>
     </form>
 
+    <div id="suggest">
+      <div id="ruby">
+        <p>Looks like Ruby really is your hidden gem!</p>
+      </div>
+      <div id="python">
+        <p>Python would look great on you!</p>
+      </div>
+      <div id="javascript">
+        <p>Javascript would fit you like a cappuccino in Rome!</p>
+      </div>
+    </div>
 
-
-  </div>
-  
+  </div> 
 </body>
 </html>
