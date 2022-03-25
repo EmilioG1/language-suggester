@@ -4,7 +4,7 @@
 // UI logic
 
 $(document).ready(function() {
-  $("form#language").submit(function (event) {
+  $("form#language").submit(function(event) {
     event.preventDefault();
     const plane = $("input:radio[name=plane]:checked").val();
     const bev = $("select#drink").val();
