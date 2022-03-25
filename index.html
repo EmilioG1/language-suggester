@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   <script src="js/jquery.js"></script>
   <script src="js/script.js"></script>
+  <title>Programming Language Suggester</title>
 </head>
 <body>
   <div class="container">
@@ -47,11 +48,11 @@
       <div class="form-group">
         <p>Have you traveled outside of the United States</p>
         <div class="form-control">
-          <input type="radio" name="visit" id="yes" checked>
+          <input type="radio" name="visit" value="yes" checked>
           <label for="yes">Yes</label>
         </div>
         <div class="form-control">
-          <input type="radio" name="visit" id="no">
+          <input type="radio" name="visit" value="no">
           <label for="no">No</label>
         </div>
       </div>
@@ -72,9 +73,8 @@
         </select>
       </div>
 
-      <div class="output">
-        <button type="submit" id="button" class="btn btn-info">Submit</button>
-      </div>
+    
+      <button type="submit" id="button" class="btn btn-info">Submit</button>
     </form>
 
     <div id="suggest">
