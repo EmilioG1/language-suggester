@@ -1,7 +1,5 @@
 // // business logic
-function showRuby() {
-  
-}
+
 
 // UI logic
 
