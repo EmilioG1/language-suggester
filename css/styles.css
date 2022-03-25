@@ -28,7 +28,7 @@ h1 {
 }
 
 #suggest {
-  border: 1px dotted rgb(207, 181, 115);
+  /* border: 1px dotted rgb(207, 181, 115); */
   text-align: center;
   padding-top: 10px;
   font-family: monospace;
@@ -51,8 +51,14 @@ h1 {
 img {
   width: 400px;
   height: auto;
+  ;
 }
 
 #button {
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-top: 10px;
   margin-bottom: 10px;
 }
