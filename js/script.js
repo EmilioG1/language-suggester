@@ -1,68 +1,65 @@
 // // business logic
-// function ruby() {
-//   return $("#ruby").show();
-// }
 
-// function python() {
-//   return $("#python").show();
-// }
-
-// function javascript() {
-//   return $("#javascript").show();
-// }
-
-// function trouble() {
-//   return $("#trouble").show();
-// }
 
 // UI logic
 
 $(document).ready(function() {
-  $("form#language").submit(function(event) {
+  $("form#language").submit(function (event) {
+    event.preventDefault();
     const plane = $("input:radio[name=plane]:checked").val();
-    // const back = $("input#back").val();
-    // const middle = $("input#middle").val();
     const bev = $("select#drink").val();
     const travel = $("input:radio[name=visit]:checked").val();
-    // const travelNo = $("input#no").val();
     const num = parseInt($("input#num").val());
-    console.log(plane);
-    console.log(bev);
-    console.log(travel);
-    console.log(num);
-    event.preventDefault();
-
 
     if (num <= 4) {
-      if (bev === "1") {
+      if (bev === "1" && travel === "no") {
         $("#ruby").show();
-        
+        $("#python").hide();
+        $("#javascript").hide();
+        $("#trouble").hide();
       } else if (bev === "2") {
         $("#python").show();
-
+        $("#javascript").hide();
+        $("#trouble").hide();
+        $("#ruby").hide();
       } else if (travel === "yes") {
         $("#javascript").show();
-
+        $("#python").hide();
+        $("#trouble").hide();
+        $("#ruby").hide();
       } else {
         $("#trouble").show();
+        $("#python").hide();
+        $("#javascript").hide();
+        $("#ruby").hide();
       }
     } else if (num >= 5 && num <= 10) {
       if (plane === "front") {
         $("#javascript").show();
+        $("#python").hide();
+        $("#trouble").hide();
+        $("#ruby").hide();
       } else if (plane === "back") {
         $("#python").show();
+        $("#javascript").hide();
+        $("#trouble").hide();
+        $("#ruby").hide();
       } else if (plane === "middle") {
         $("#ruby").show();
+        $("#python").hide();
+        $("#javascript").hide();
+        $("#trouble").hide();
       } else {
         $("#trouble").show();
+        $("#python").hide();
+        $("#javascript").hide();
+        $("#ruby").hide();
       }
     } else {
       $("#trouble").show();
+      $("#python").hide();
+      $("#javascript").hide();
+      $("#ruby").hide();
     }
-
-    // $("#python").hide();
-    // $("#javascript").hide();
-    // $("#trouble").hide();
-    // $("#ruby").hide();
   });
 });
